@@ -27,6 +27,9 @@ te bouwen met behulp van html, css en php die
 2) burgers in staat stelt een vaccinatie in te plannen,
 3) (bonus:) burgers in staat stelt de gezondheidsverklaring in te vullen.
 
+*Bij dit scenario is het maken van de database makkelijker en wordt er
+vooral een sterke implementatie van je database op de website verwacht.*
+
 ## De verhuurwebsite
 
 Je hebt zojuist 2 miljoen euro gecasht. Dit keer geen erfenis van een
@@ -45,3 +48,15 @@ het budget) een website te bouwen met html, css en php die
 1) alle huizen weergeeft vanuit een database,
 2) gezinnen in staat stelt een huis te boeken,
 3) (bonus:) gezinnen in staat stelt zelf hun huis voor verhuur aan te melden.
+
+*Bij dit scenario is het maken van de database moeilijker en wordt vooral
+een goede database verwacht; implementatie op de website mag hier en daar
+wat eenvoudiger zijn.*
+
+## Algemene eisen
+
+Je website omvat 4 of meer pagina's, waaronder:
+* de homepagina: deze maak je zoals je wilt; je kunt php gebruiken, maar bent daar niet toe verplicht.
+* de overzichtspagina: deze geeft met behulp van php alle *records* in je database weer (huisjes of medewerkers).
+* de reserveringspagina: deze bevat een formulier waarmee mensen zich kunnen inschrijven (voor een huisje of vaccinatie).
+* de contactpagina: deze bevat een formulier waarmee mensen bij vragen een mail kunnen sturen.
