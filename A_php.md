@@ -73,3 +73,73 @@ Al kun je de laatste versimpelen door wat overzichtelijkheid op te offeren:
 ```
 
 Kies zelf, maar kies wel het liefst bewust voor één methode!
+
+## Verbinden met de database
+
+Een verbinding leggen met de database gaat als volgt:
+
+```php
+<?php
+$db = mysqli_connect("localhost", "gebruikersnaam", "wachtwoord", "database");
+
+// functies om de verbinding te gebruiken....
+
+mysqli_close($db);
+?>
+```
+
+Hierbij zijn de volgende 4 dingen nodig:
+* de locatie van de database-server: meestal *localhost*,
+* de gebruikersnaam - dit is de gebruikersnaam van de *user* die je aangemaakt hebt voor je database,
+* het wachtwoord - dit is het wachtwoord van diezelfde *user* die je aangemaakt hebt,
+* de naam van de database - dit is waarschijnlijk Huisjes of Vaccinaties.
+
+De openstaande verbinding met de database 'slaan we op'
+in een variabele met de naam <kbd>$db</kbd>.
+
+## Een query naar de database sturen
+
+Een *query*  is een opdracht voor een database. In bijlage
+B kun je hier meer over lezen. Met een query kun je
+bestaande informatie ophalen uit je database, informatie
+wijzigen, of nieuwe informatie invoegen.
+
+Met onderstaand codevoorbeeld stuur je een query naar de
+database. De query zetten we in de variabele <kbd$q</kbd>,
+het resultaat hiervan slaan we op in de
+variabele <kbd>$r</kbd>. Als je query faalt, bevat <kbd>$r</kbd>
+de waarde *false*.
+
+Is de query wel gelukt, krijg je een resultaat terug.
+Bij een "SELECT ..." query is dat een dataobject. Bij een
+"INSERT ...", "DELETE ..." of "UPDATE ..." query is dat *true*.
+
+```php
+<?php
+// Maak hier eerst verbinding met de database – zie 4.1
+
+$q = "INSERT INTO `Klanten` (`ID`, `Naam`) VALUES ('','".$_POST['Naam']."')";   // Een voorbeeld om een ID en naam in een database op te slaan
+$r = mysqli_query($db,$q);  // Voer de query uit op de database
+if(!$r) {                   // 'Als niet $r' (als $r niet waar is), printen we dat het commando gefaald heeft
+  echo "Query failed";
+}
+
+// Vergeet de database verbinding niet te sluiten!
+?>
+```
+
+## Een query resultaat gebruiken
+
+Als je in $r een dataobject hebt zitten, wil je het natuurlijk
+op de webpagina kunnen gebruiken om gegevens weer te geven.
+Zit er in <kbd>$r</kbd> één record (wel zo handig), dan vertaal
+je <kbd>$r</kbd> naar een *array* <kbd>$d</kbd> met:
+
+```php
+<?php
+$d = mysqli_fetch_array($r);
+?>
+```
+
+De losse velden van het array <kbd>$d</kbd> kun je dan
+gebruiken als `$d['kolomnaam']`.
