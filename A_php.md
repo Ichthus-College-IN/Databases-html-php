@@ -52,7 +52,8 @@ Vergelijk:
 <?php                                       // html binnen php
   echo '<h1>'.$d['Naam'].'</h1>
   <p>'.$d['Adres'].'<br>
-  $d['Postcode'].' '.$d['Plaats'].'</p>';?>
+  $d['Postcode'].' '.$d['Plaats'].'</p>';
+?>
 </body>
 ```
 met:
