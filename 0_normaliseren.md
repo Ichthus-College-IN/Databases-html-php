@@ -14,15 +14,18 @@ Het komt er op neer dat alle informatie die nodig is, minimaal en maximaal één
 opgeslagen wordt. Als je van 17 miljoen mensen wilt bijhouden of ze wel of niet
 gevaccineerd zijn, kun je maar beter geen dubbele informatie bijhouden, want dan wordt
 je database veel te groot en traag. Daarnaast moet je geen data bijhouden die gebaseerd
-wordt op andere data; bijvoorbeeld: geen leeftijd, maar geboortedatum, want die 
-leeftijd kun je dan altijd opnieuw uitrekenen.
+wordt op andere data; bijvoorbeeld: geen leeftijd die elk jaar verandert, maar 
+geboortedatum, want die leeftijd kun je dan altijd even opnieuw uitrekenen.  
+
+En in plaats van een adres op te slaan als een enorme 'string', kun je die het beste
+opknippen in straat, huisnummer e.d.: getallen kun je bijvoorbeeld efficiënter
+opslaan dan tekst, en zo kun je ook makkelijker een analyse uitvoeren van wie waar
+woont bijvoorbeeld.
 
 De basisregels van normaliseren zijn dus:
-- Vermijd dubbele gegevens
-- Vermeld geen gegevens die bepaald worden op basis van andere gegevens
-
-En specifiek voor databases in php:
-- Splits alle gegevens van één datatype waar mogelijk uit!
+- Vermijd dubbele gegevens.
+- Vermeld geen gegevens die bepaald worden op basis van andere gegevens.
+- Splits alle gegevens zo ver mogelijk op.
 
 ## Praktijk
 
@@ -44,11 +47,14 @@ sinds 2000'; daarbij gebruik je bijvoorbeeld 1) de artiest, 2) de lp-titel, en
 ## Voorbeeld
 
 **Gevaccineerden**
-|BSN|Voorletters|Tussenvoegsel|Achternaam |Straatnaam     |Huisnummer|Toevoeging|Postcode|Woonplaats|
+|ID*|Voorletters|Tussenvoegsel|Achternaam |Straatnaam     |Huisnummer|Toevoeging|Postcode|Woonplaats|
 |:-:|:----------|:------------|:----------|:--------------|:---------|:---------|:-------|:---------|
 |1  |SJ         |             |Boonstoppel|Haverveld      |41        |          |3902EA  |Veenendaal|
 |2  |P          |van der      |Berg       |Mulderslaan    |1         |          |3905GA  |Veenendaal|
 |3  |MA         |             |Xavier     |Jan Linsestraat|8         |A         |6717JW  |Ede       |
+
+\* let op: ook al vinden we eigenlijk dat dit het BSN van een persoon is, geven we het unieke nummer
+van een persoon **altijd** de naam ID!
 
 **Vaccinaties**
 |ID |BSN|Type   |Datum     |Bijzonderheden                                     |
