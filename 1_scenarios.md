@@ -5,7 +5,7 @@ wat je interessanter vindt, maar kun je elkaar ook goed helpen als je
 hetzelfde onderwerp hebt. De twee scenario's zijn:
 
 1) Een vaccinatiecentrum
-2) Een vakantiehuisverhuur
+2) Een machineplanner
 
 Hieronder voor beide scenario's een korte introductie met de situatie
 waarin je je bevindt.
@@ -24,39 +24,36 @@ De opdracht is om voor een aankomende vaccinatielocatie een website
 te bouwen met behulp van html, css en php die
 
 1) alle medewerkers weergeeft vanuit een database,
-2) burgers in staat stelt een vaccinatie in te plannen,
-3) (bonus:) burgers in staat stelt de gezondheidsverklaring in te vullen.
+2) vaccinatiecentrummedewerkers een logboek laat bijhouden waarbij ze paciënten en hun vaccinaties en bijzonderheden kunnen invullen,
+3) het logboek kan weergeven,
+4) (bonus:) burgers in staat stelt een vaccinatie in te plannen.
 
-*Bij dit scenario is het maken van de database makkelijker en wordt er
-vooral een sterke implementatie van je database op de website verwacht.*
+## De machineplanner
 
-## De verhuurwebsite
+Het Ichthus is in het bezit van een serie apparatuur, verspreid door de school.
+Het probleem is echter dat leerlingen en docenten hier op elk moment gebruik
+van willen maken, terwijl er soms andere klassen voorrang zouden moeten hebben
+of er onnodig veel gewisseld wordt. Het is daarom van groot belang dat er een
+planningssysteem komt waar docenten en leerlingen een apparaat kunnen reserveren
+dat ze vervolgens kunnen gebruiken op het aangegeven moment. Dit maakt duidelijk
+welk apparaat waar en wanneer gebruikt wordt, en geeft docenten de mogelijkheid
+om van tevoren voor klassen apparaten te kunnen reserveren. Zij moeten dat voor
+een hele periode kunnen reserveren, terwijl leerlingen maximaal twee schooldagen
+vooruit mogen kunnen reserveren. Dat geeft docenten genoeg tijd om hun zaken te 
+regelen.
 
-Je hebt zojuist 2 miljoen euro gecasht. Dit keer geen erfenis van een
-tante, maar je hebt jouw 50 bitcoins verkocht die je voor €8 als 
-cadeautje gekregen had van je melige oom toen je 8 werd. Aangezien
-vastgoed ongeveer even snel stijgt als de bitcoin maar een stuk
-zekerder is, besluit je om 3 vakantiehuisjes te kopen en te gaan
-verhuren. Je bent echter beter met computers dan met je handen, dus
-besluit je zelf de website te bouwen en laat je de huizen wel door
-anderen opknappen. Het gaat dan specifiek om databases voor de huisjes
-en (hopelijk) boekingen.
+De opdracht is om voor alle relevante apparatuur in het Ichthus een website te 
+bouwen met html, css en php die
 
-De opdracht is om voor drie of meer van Funda gekozen huizen (binnen 
-het budget) een website te bouwen met html, css en php die
-
-1) alle huizen weergeeft vanuit een database,
-2) gezinnen in staat stelt een huis te boeken,
-3) (bonus:) gezinnen in staat stelt zelf hun huis voor verhuur aan te melden.
-
-*Bij dit scenario is het maken van de database moeilijker en wordt vooral
-een goede database verwacht; implementatie op de website mag hier en daar
-wat eenvoudiger zijn.*
+1) alle apparaten weergeeft die gereserveerd kunnen worden met hun specificaties,
+2) leerlingen en docenten in staat stelt apparaten te kunnen reserveren,
+3) de reserveringen kan weergeven,
+4) (bonus:) leerlingen maximaal twee dagen vooruit laat reserveren en docenten een hele periode,
+5) (bonus:) docenten herhaalmogelijkheden geeft om 'elke week' uren te kunnen reserveren.
 
 ## Algemene eisen
 
-Je website omvat 4 of meer pagina's, waaronder:
-* de homepagina: deze maak je zoals je wilt; je kunt php gebruiken, maar bent daar niet toe verplicht.
-* de overzichtspagina: deze geeft met behulp van php alle *records* in je database weer (huisjes of medewerkers).
+Je website omvat 3 of meer pagina's, waaronder:
 * de reserveringspagina: deze bevat een formulier waarmee mensen zich kunnen inschrijven (voor een huisje of vaccinatie).
-* de contactpagina: deze bevat een formulier waarmee mensen bij vragen een mail kunnen sturen.
+* de planningspagina: deze geeft alle *records* of *entries* in een dynamische database weer (agenda of logboek).
+* de overzichtspagina: deze geeft alle *records* of *entries* in een statische database weer (machines of medewerkers).
