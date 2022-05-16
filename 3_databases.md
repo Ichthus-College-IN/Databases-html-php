@@ -18,19 +18,29 @@ nadenken: doe je het nu goed, dan rolt de rest er vanzelf achteraan.
 5) **sla** je Excel-document **op**.
 6) sla vervolgens elk tabblad op als **CSV (MS-DOS)**.
 7) zoek in Windows Verkenner zo'n CSV-bestand op -> rechtermuisknop -> **Open in Notepad++** en controleer welk teken er tussen de velden staat.
+8) **verwijder** uit het CSV-bestand de **eerste kolom** (handmatig via Notepad++ of via openen in Excel de hele kolom): deze ID-kolom wordt automatisch aangemaakt door phpMyAdmin.
+
+## Een lege database
+Standaard heeft je website nog **geen databases**. Deze zul je
+eerst zelf moeten **aanmaken**. Ga daarvoor naar de volgende URL:
+[icvi.nl:2222](https://s29-kvm.wlserver.nl:2222/). Log hier in met je eigen gegevens.  
+Klik onder de kop *Your account* op *MySQL Management*. Klik
+daar vervolgens op *Create new database* linksbovenin. Maak
+een database met een relevante naam, en bedenk een **gebruikersnaam**
+en **wachtwoord**. **Onthoud deze**, want die heb je nodig om via de
+website **verbinding** te maken met je database!
 
 ## Van CSV naar database
 
-We gaan nu naar het cpanel om daar de database op de website
+We gaan nu naar phpMyAdmin om daar de database op de website
 aan te maken. Vervolgens kunnen we daar het CSV-bestand
 importeren en is je database direct gevuld met informatie.
 
-1) log in op je **cpanel**.
-2) open **phpMyAdmin**.
+2) open **phpMyAdmin** via [icvi.nl/phpmyadmin](icvi.nl/phpmyadmin).
 3) klik links op de database die je eerder gemaakt hebt, en voeg hier evenveel **tabellen** toe als je tabbladen hebt in je Excel-bestand. Geef ze ook een nuttige **naam**.
 4) ga vervolgens voor elke tabel naar **Structure** en voeg onder elkaar de namen van je kolommen toe, met het **datatype** dat er in die kolom staat. Zie onderstaand overzicht voor de datatypes.
 5) noem de eerste kolom **altijd** ID, kies bij Index voor **Primary** en vink **A_I** aan. De andere kolommen maken *geen* gebruik van die twee functies.
-6) kies vervolgens voor **Import**, en kies voor elke tabel het goede CSV-bestand. Selecteer het **scheidingsteken**, en vink aan dat je de eerste **query** wilt **overslaan** (de regel met kolomnamen).
+6) kies vervolgens voor **Import**, en kies voor elke tabel het goede CSV-bestand. Selecteer het **scheidingsteken**, en vink aan dat je de eerste **query** wilt **overslaan** (de regel met kolomnamen wordt dan niet meegenomen).
 7) importeer vervolgens het bestand, en als het goed is gegaan komt er een mooie groene balk; krijg je een **error**, lees dan goed wat er staat en probeer het probleem op te lossen. Vraag de **docent** als het niet lukt.
 
 ## Datatypes
