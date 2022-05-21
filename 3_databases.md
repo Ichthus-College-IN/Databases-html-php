@@ -36,7 +36,7 @@ We gaan nu naar phpMyAdmin om daar de database op de website
 aan te maken. Vervolgens kunnen we daar het CSV-bestand
 importeren en is je database direct gevuld met informatie.
 
-2) open **phpMyAdmin** via [icvi.nl/phpmyadmin](icvi.nl/phpmyadmin).
+2) open **phpMyAdmin** via [icvi.nl/phpmyadmin](https://www.icvi.nl/phpmyadmin).
 3) klik links op de database die je eerder gemaakt hebt, en voeg hier evenveel **tabellen** toe als je tabbladen hebt in je Excel-bestand. Geef ze ook een nuttige **naam**.
 4) ga vervolgens voor elke tabel naar **Structure** en voeg onder elkaar de namen van je kolommen toe, met het **datatype** dat er in die kolom staat. Zie onderstaand overzicht voor de datatypes.
 5) noem de eerste kolom **altijd** ID, kies bij Index voor **Primary** en vink **A_I** aan. De andere kolommen maken *geen* gebruik van die twee functies.
