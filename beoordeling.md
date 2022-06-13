@@ -17,6 +17,7 @@ Behalen van minimum requirements levert dus een 5.5 op.
 -	[MEDIUM] pas alle kleuren op je website aan naar een Ichthus opmaak of ander fatsoenlijk en matchend thema (1pt)
 -	[MEDIUM] zorg ervoor dat de weergave van de tabellen (zie minimum requirements) meedoet met de opmaak van de website (dus niet: ergens een kale niet-opgemaakte HTML-table) (1pt)
 -	[MEDIUM] geef alleen reserveringen weer voor vandaag en de toekomst (1pt)
+-	[MEDIUM] zorg dat je bij het opsturen van je formulier niet naar een losse pagina gestuurd wordt (1pt)
 -	[HARD] verwijder alle reserveringen in je tabel die in het verleden liggen (of bijvoorbeeld meer dan een week geleden) (1.5pt)
 -	[HARD] bij het weergeven van je reserveringen, gebruik dan het nummer van de machine/medewerker om ook de bijbehorende informatie uit de andere tabel weer te geven (1.5pt)
 -	[EXTREME] maak je website bestand tegen SQL-injection of andere vormen van hacken; bijvoorbeeld: filter de input van een formulier op “, ‘ en > om te voorkomen dat er verkeerde tekens in je strings voorkomen (2pt)
